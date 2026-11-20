@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Signup</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+}
+
+.container {
+    width: 950px;
+    min-height: 590px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #111;
+    border: 1px solid #6f582c;
+    box-shadow: 0 25px 90px rgba(0,0,0,.7);
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+
+.left {
+    position: relative;
+    padding: 65px 45px;
+    background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+      radial-gradient(circle at center,#78602d,#17120a 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.left::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(218,181,105,.25);
+    border-radius: 50%;
+    top: -120px;
+    left: -130px;
+}
+
+.left::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(218,181,105,.3);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -100px;
+}
+
+.brand {
+    color: #d8b56d;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
+}
+
+.left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.left h1 span {
+    color: #d8b56d;
+}
+
+.line {
+    width: 75px;
+    height: 2px;
+    background: #d8b56d;
+    margin: 25px 0;
+}
+
+.left p {
+    color: #b9b3a7;
+    font-size: 13px;
+    line-height: 2;
+    max-width: 300px;
+}
+
+.left .bottom {
+    margin-top: 55px;
+    color: #d8b56d;
+    letter-spacing: 3px;
+    font-size: 10px;
+}
+
+/* RIGHT SIDE */
+
+.right {
+    padding: 55px 48px;
+    background: #f7f3eb;
+}
+
+.top-label {
+    color: #9c783b;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.right h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 12px;
+    color: #191714;
+}
+
+.desc {
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+    margin: 10px 0 30px;
+}
+
+.input-box {
+    margin-bottom: 19px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    color: #51432e;
+    letter-spacing: 1.5px;
+    margin-bottom: 7px;
+}
+
+.input-box input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c9bfae;
+    background: transparent;
+    padding: 12px 3px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    color: #222;
+    transition: .3s;
+}
+
+.input-box input:focus {
+    border-color: #a77a32;
+    padding-left: 10px;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+}
+
+.terms {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 10px;
+    color: #777;
+    margin: 22px 0;
+}
+
+.terms input {
+    accent-color: #9c783b;
+}
+
+.submit {
+    width: 100%;
+    padding: 15px;
+    background: #191714;
+    color: #e2c17e;
+    border: 1px solid #191714;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.submit:hover {
+    background: #b08a49;
+    color: #fff;
+    border-color: #b08a49;
+    letter-spacing: 5px;
+}
+
+.login {
+    text-align: center;
+    font-size: 11px;
+    margin-top: 25px;
+    color: #777;
+}
+
+.login a {
+    color: #997239;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media(max-width: 750px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    .left {
+        min-height: 270px;
+        padding: 35px;
+    }
+
+    .left h1 {
+        font-size: 35px;
+    }
+
+    .left .bottom {
+        margin-top: 20px;
+    }
+
+    .right {
+        padding: 40px 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <div class="brand">✦ ROYAL ELITE</div>
+
+        <h1>
+            A New<br>
+            Beginning.<br>
+            <span>A Better You.</span>
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            Discover a world of elegance,
+            innovation and extraordinary
+            experiences. Your journey begins here.
+        </p>
+
+        <div class="bottom">
+            ELEGANCE • EXCELLENCE • EXPERIENCE
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="top-label">WELCOME TO ROYAL ELITE</div>
+
+        <h2>Create Account</h2>
+
+        <p class="desc">
+            Please enter your details to get started.
+        </p>
+
+        <form id="signupForm">
+
+            <div class="input-box">
+                <label>FULL NAME</label>
+                <input type="text" placeholder="Your full name" required>
+            </div>
+
+            <div class="input-box">
+                <label>EMAIL ADDRESS</label>
+                <input type="email" placeholder="Your email address" required>
+            </div>
+
+            <div class="input-box">
+                <label>PASSWORD</label>
+                <input type="password" placeholder="Create password" minlength="8" required>
+            </div>
+
+            <div class="input-box">
+                <label>CONFIRM PASSWORD</label>
+                <input type="password" placeholder="Confirm password" minlength="8" required>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" required>
+                <span>I agree to the Terms & Conditions</span>
+            </div>
+
+            <button class="submit" type="submit">
+                CREATE MY ACCOUNT
+            </button>
+
+        </form>
+
+        <div class="login">
+            Already a member? <a href="#">Sign In</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const pass = this.querySelectorAll('input[type="password"]');
+
+    if(pass[0].value !== pass[1].value) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    alert("Your form has been submitted!");
+});
+</script>
+
+</body>
+</html>
